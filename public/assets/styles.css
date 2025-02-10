@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 200px auto;
+}
+
+.grid-container .heading  {
+    text-align: center;
+    grid-column: span 3;
+    align-self: center;
+    justify-self: center;
+    font-family: 'Open Sans';
+    font-size: 1.5rem;
+}
+
+.grid-container .heading small {
+    font-style: italic;
+}
+
+.blog-content {
+    grid-column: 2;
+    font-family: 'Open Sans';
+    margin: 20px 0 0 0;
+    cursor: pointer;
+}
+
+.blog-content p + p  {
+    margin-top: 10px;
+}
