@@ -3,14 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/styles.css">
     <title>View Post</title>
 </head>
 <body>
     <div class="grid-container">
         <div class="heading">
+
+        </div>
+        <!-- <div class="heading">
             <h1 id="post-title">This is the view html file</h1>
             <small id="post-author"></small>
-        </div>
+        </div> -->
         <div class="blog-content" id="post-content"></div>
+        <script>
+            const heading = document.querySelector(".heading");
+            const id = window.location.pathname.split("/").slice(-1)[0];
+            fetch(`http://localhost:4000/${id}`).then(response => response.json()).then(data => {
+                const post = document.createElement('div');
+                post.classList.add('post');
+                post.innerHTML = `
+                <h1 id="post-title">${data.title}</h1>
+                <small id="post-author">${data.author}</small>
+                <p>${data.post}</p>
+                `;
+                heading.appendChild(post);
+            });
+        </script>
 </body>
 </html>
