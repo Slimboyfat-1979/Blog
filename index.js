@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { response } from 'express';
 import path from 'path';
 import { fileURLToPath} from 'url';
 import { dirname } from 'path';
@@ -15,7 +15,15 @@ app.listen(3000, () => {
 })
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-    
-   
+    res.sendFile(path.join(__dirname, 'index.html')); 
 })
+
+app.get("/view/:id", (req, res) => {
+    const id = req.params.id;
+    res.sendFile(path.join(__dirname, 'public', 'view.html'))
+    // fetch(`http://localhost:4000/${id}`).then(response => response.json()).then(data => {
+    //     console.log(data);
+    // });
+
+})
+

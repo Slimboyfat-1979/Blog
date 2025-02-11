@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <p><strong>Author:${post.author}</strong></p>
             <p>${post.post}</p>
             <div class="btn">
-            <a href='/newPage'>View</a>
-            <a href='/newPage'>Edit</a>
+            <a href='/view/${post.id}'>View</a>
+            <a href='/edit/${post.id}'>Edit</a>
             </div>
 
         `;

@@ -7,10 +7,17 @@ app.listen(4000, () => {
 })
 
 app.get("/", (req, res) => {
-    res.json(blog);
+    res.json(blogPosts);
+});
+
+app.get("/:id", (req, res) => {
+    const id = req.params.id;
+    const post = blogPosts.find(post => post.id === parseInt(id));
+    console.log(post)
+    res.json(post);
 })
 
-const blog = [
+const blogPosts = [
     {
       "id": 1,
       "title": "The Art of Minimalism",
