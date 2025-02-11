@@ -29,9 +29,32 @@
     grid-column: 2;
     font-family: 'Open Sans';
     margin: 20px 0 0 0;
-    cursor: pointer;
 }
+
+
 
 .blog-content p + p  {
     margin-top: 10px;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.blog-content a {
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.blog-content a:first-of-type {
+    background-color: green;
+}
+
+.blog-content a:last-of-type {
+    background-color: rgb(204, 147, 40);
 }

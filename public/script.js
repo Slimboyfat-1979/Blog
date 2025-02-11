@@ -9,16 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
       const gridContainer = document.querySelector(".grid-container");
       data.forEach((post) => {
         const postElement = document.createElement("div");
-        postElement.classList.add('blog-content');
+        postElement.classList.add("blog-content");
         postElement.innerHTML = `
             <h2>${post.title}</h2>
             <p><strong>Author:${post.author}</strong></p>
             <p>${post.post}</p>
-            <button>View</button>
-            <button>Edit</button>
+            <div class="btn">
+            <a href='/newPage'>View</a>
+            <a href='/newPage'>Edit</a>
+            </div>
 
         `;
-        gridContainer.appendChild(postElement)
+        gridContainer.appendChild(postElement);
       });
     });
 });
