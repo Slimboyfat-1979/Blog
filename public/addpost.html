@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles.css" />
     <title>Document</title>
-</head>
-<body>
-    <h1>This is the add post page</h1>
-    <form action="/" method="post">
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="heading">
+        <h1>Add Post</h1>
+        <small>Add Your Post In The Form Below</small>
+      </div>
+
+      <form action="/submit" method="post">
         <div class="input-group">
-            <label for="">Title</label>
-            <input type="text">
+          <label for="">Title</label>
+          <input type="text" name="title"/>
         </div>
         <div class="input-group">
-            <label for="">Author</label>
-            <input type="text">
+          <label for="">Author</label>
+          <input type="text" name="author" />
         </div>
         <div class="input-group">
-            <label for="">Post</label>
-            <input type="text">
+          <label for="">Post</label>
+          <textarea name="post" id=""></textarea>
         </div>
         <button>Submit</button>
-    </form>
-</body>
+      </form>
+    </div>
+  </body>
 </html>
